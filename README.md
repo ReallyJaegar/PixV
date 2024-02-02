@@ -25,10 +25,11 @@ Any of the below methods can be used to access PixV.
     pip install pixv
   ```
 
--  Clone the repository and use feature.py in src directory to access all commands
+-  Clone the repository, install dependencies and use feature.py in src directory to access all commands
 
   ```bash
     git clone https://github.com/ReallyJaegar/PixV.git
+    pip install -r requirements.txt
   ``` 
   ```
     pthon3 feature.py [COMMAND] [OPTIONS]
