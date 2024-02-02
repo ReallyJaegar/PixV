@@ -3,8 +3,7 @@
 
 ## Description 
 
-PixV 
-is an image version control system designed to efficiently manage image changes, minimizing storage usage. Accessible as a Python package via pip install pixv, PixV utilizes a graph data structure, where each node represents a version. The project boasts numerous features for accessing different versions and offers versatile functionalities.
+PixV is an image version control system designed to efficiently manage image changes, minimizing storage usage. Accessible as a Python package via pip install pixv, PixV utilizes a graph data structure, where each node represents a version. The project boasts numerous features for accessing different versions and offers versatile functionalities.
 
 
 
@@ -18,28 +17,74 @@ is an image version control system designed to efficiently manage image changes,
 - License
 
 ## Installation
+Any of the below methods can be used to access PixV.
 
-Install PixV with pip
+- Install PixV with pip
 
-```bash
-  pip install pixv
-```
+  ```bash
+    pip install pixv
+  ```
+
+-  Clone the repository and use feature.py in src directory to access all commands
+
+  ```bash
+    git clone https://github.com/ReallyJaegar/PixV.git
+  ``` 
+  ```
+    pthon3 feature.py [COMMAND] [OPTIONS]
+  ```
 
 ## Features
 - ## Add New Image in PixV
-##### To use the Version Control System on a image , run the following command:
-####
-```python3 feature.py add path/to/image.png --author "Name of author"```  
+
+To intialise the tree of version control system.
+Further versions can only be created once the root node is created.
+
+It creates a root node (nodes.rootNode).
+
+-
+  ```bash
+  pixv add [path/to/image.png] --author [NAME]
+  ```
+  or
+-
+  ```bash
+  python3 feature.py add [path/to/image.png] --author [NAME]"
+  ```  
 - ## Commit Changes
-##### Commit the changes in the image using the following command:
-####
-```python3 feature.py add path/to/image.png --message "commit_message" --author "Name of author"```
+To add versions to the image once the root node (nodes.rootNode) has been initialised.
+
+Wont work if the nodes.rootNode has not been initialised.
+
+-
+  ```bash
+  pixv commit [path/to/image.png] --message [COMMIT MESSAGE] --author [NAME]
+  ```
+
+    or
+
+-
+  ```bash
+  python3 feature.py commit path/to/image.png --message "commit_message" --author "Name of author"
+  ```
+
+
 - ## Logs : 
 #####  Displays all the versions of the image availiable in the project along with their uuid ,author ,time, commit_message.
 
 To use the function run the following command in your terminal :
 
-``` python3 feature.py logs path/to/image.png ```
+-
+  ```bash
+  pixv logs [path/to/image.png]
+  ```
+  or
+
+-
+  ```bash
+  python3 feature.py logs path/to/image.png 
+  ```
+
 ####
 - ## Push and Pull 
 ##### Push : It uploads local repository content to a remote repository.
@@ -47,8 +92,20 @@ To use the function run the following command in your terminal :
 ####
 Commands :
 
-Push: ```python3 feature.py push path/to/image.png```
-Pull: ```python3 feature.py push path/to/image.png```
+-
+  -
+    Push: ```python3 feature.py push path/to/image.png```
+  -
+    Pull: ```python3 feature.py push path/to/image.png```
+
+  or
+-
+  -
+    Push: ```pixv push [path/to/image.png]```
+  -
+    Pull: ```pixv push [path/to/image.png]```
+
+
 ####
 - ## Forward & Revert
 ##### Forward : Feature to move to Next availiable Version 
@@ -59,17 +116,32 @@ Commands:
 Forward : ```python3 feature.py forward path/to/image.png```
 ####
 Revert : ```python3 feature.py revert path/to/image.png```
+#### or
+####
+Forward : ```pixv forward [path/to/image.png]```
+####
+Revert : ```pixv feature.py revert [path/to/image.png]```
+
 ####
 - ## Shift
 ##### Can Shift to any version of the image using only this following command:
-```python3 feature.py shift path/to/image.png --id [unique id of the version]```
+-
+  ```python3 feature.py shift path/to/image.png --id [unique id of the version]```
+#### or
+
+- 
+  ```pixv shift [path/to/image.png] --id [unique id of the version]```
 ####
 #### Note : unique id can be seen using Logs command
 ####
 - ## Hist
 Using this function the user will be able to visualize the complete graph structure in the terminal.
 ####
-```python3 feature.py hist [image.png]```
+-
+  ```python3 feature.py hist [image.png]```
+  or
+-
+  ```pixv hist [image.png]```
 
 The graph structure will look like this:
 
@@ -80,17 +152,38 @@ The graph structure will look like this:
 ####
 Using this function user can locate where head is pointing.
 ####
-```python3 feature.py locate path/to/image.png```
+-
+  ```python3 feature.py locate path/to/image.png```
+  or
+
+-
+  ```pixv locate [path/to/image.png]```
+
+
 #####
 - ## Original
 #####
 Brings back the original version of the image
 ###
-Command: ```python3 feature.py original path/to/image.png```
+-
+  ```python3 feature.py original path/to/image.png```
+  or
+-
+  ```pixv original [path/to/image.png]```
+
 ####
 - ## Show 
 #####
-##### Using the following command user can load the image : ```python3 feature.py original path/to/image.png```
+##### Using the following command user can load the image on the current HEAD location in the imageGraph :
+-
+  ```
+  python3 feature.py show [name of image]
+  ``````
+
+or
+
+-
+  ```pixv show [nameofimage]```
 
 
 
@@ -106,9 +199,10 @@ We've enhanced the version control system to minimize storage usage by storing o
 - #### matplotlib==3.8.2
 - #### click==8.1.7
 ###
+
 If you want to create your own server for file sharing :
 
-Run the file_server.py
+- Use the file_server.py 
 
 
 ## Future Development Goals
@@ -130,4 +224,3 @@ Run the file_server.py
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
