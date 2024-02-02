@@ -1,7 +1,8 @@
 ![](image/Logos.png)
 # PixV (Image Version Control System)
 
-Our pypi package ![pixv](https://pypi.org/project/pixv)
+Our pypi package -> ![pixv](https://pypi.org/project/pixv).
+
 The current stable version is 0.1.1
 
 ## Description 
