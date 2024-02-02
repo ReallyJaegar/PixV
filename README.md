@@ -1,6 +1,9 @@
 ![](image/Logos.png)
 # PixV (Image Version Control System)
 
+Our pypi package ![pixv](https://pypi.org/project/pixv)
+The current stable version is 0.1.1
+
 ## Description 
 
 PixV is an image version control system designed to efficiently manage image changes, minimizing storage usage. Accessible as a Python package via pip install pixv, PixV utilizes a graph data structure, where each node represents a version. The project boasts numerous features for accessing different versions and offers versatile functionalities.
