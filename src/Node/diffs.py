@@ -1,36 +1,6 @@
 from PIL import Image
 import numpy as np
 
-
-# path1="/Users/somshekharsharma/Downloads/bkl.jpg"
-# path2="/Users/somshekharsharma/Downloads/bkl2.png"
-# path3="/Users/somshekharsharma/Downloads/bkl3.png"
-# path4="/Users/somshekharsharma/Downloads/bkl4.jpg"
-# pathfotor2="/Users/somshekharsharma/Downloads/bkl2_fotor.png"
-
-# def image_to_array(image_path):
-#     # Open the image using Pillow
-#     image = Image.open(image_path)
-
-#     # Convert the image to a NumPy array
-#     image_array = np.array(image)
-#     image_array = image_array.astype(np.float128)  # Convert to float64 to avoid overflow
-
-
-#     return image_array
-
-# # image1=image_to_array(path1)
-# image2=image_to_array(path2)
-# image3=image_to_array(path3)
-# image4=image_to_array(pathfotor2)
-# image5=image_to_array(path4)
-# image4=image1.copy()
-# image4[0][0][0]=100
-# image4[0][1][2]=13
-# print(image1.shape)
-# print(type(image1.shape))
-# print((image1))
-
 def image_dimensions_return_list(image1:np.ndarray):
     '''
     Function to return the shape of the image in tuple
@@ -48,11 +18,6 @@ def check_image_dimensions_return_bool(image1:np.ndarray,
 
     return (image1.shape==image2.shape)
 
-# print(check_image_dimensions_return_bool(image1,image2))
-
-
-
-# zhape=(image_dimensions_return_list(image1))
 # print(zhape)
 # _i,_j,_k=zhape
 # print(_i)
