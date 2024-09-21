@@ -18,9 +18,6 @@ def check_image_dimensions_return_bool(image1:np.ndarray,
 
     return (image1.shape==image2.shape)
 
-# print(zhape)
-# _i,_j,_k=zhape
-# print(_i)
 
 def changed_pixel_return_dict(head_image:np.ndarray,
                               new_image:np.ndarray):
